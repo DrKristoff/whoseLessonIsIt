@@ -1,0 +1,54 @@
+/* CSS Document */
+body {
+  
+}
+
+.teacher-card-image.mdl-card {
+  width: 256px;
+  height: 256px;
+  margin: 10px auto;
+}
+.teacher-card-image > .mdl-card__actions {
+  height: 52px;
+  padding: 16px;
+  background: rgba(237, 7, 38, 0.8);
+}
+.teacher-card-image__filename {
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+}
+.teacher-Bryce {
+  background: url('../images/bryce.jpg') center / cover;
+}
+.teacher-Rene {
+  background: url('../images/rene.jpg') center / cover;
+}
+.teacher-Ryan {
+  background: url('../images/ryan.jpg') center / cover;
+}
+
+.mdl-button--fab.mdl-button--colored {
+  background: rgb(237, 7, 38);;
+  color: #fff;
+}
+
+.controls {
+  width : 500px; 
+  display:flex; 
+  margin:20px auto;
+}
+
+.controls > button {
+   width: 150px;
+   vertical-align:middle; 
+}
+@media screen and (max-width: 500px) {
+.controls {
+	width: 100%;
+  padding:20px;
+  margin:0 auto;
+}
+}
+  
+  
