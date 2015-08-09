@@ -10,36 +10,36 @@
 </head>
 
 <body>
-<!-- Image card -->
+<div class="page">
 <div class="controls" style="">
-    <button onclick = "App.previousWeek()" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect"> Previous Week</button>
+    <button onclick = "App.previousWeek()" class="mdl-button mdl-button--colored mdl-js-button mdl-button--raised mdl-js-ripple-effect"> Previous Week</button>
 
   <p style="text-align:center; width:200px"><span id='targetDate'>Today's Date</span><br>
   <span id='nextLessonDate'>Next Lesson Date</span><br>
   <span id='nextLesson'>Lesson Number and Link</span></p><br>
    <br>
   <br>
-  <button onclick="App.nextWeek()" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect"> Next Week</button>
+  <button onclick="App.nextWeek()" class="mdl-button mdl-js-button mdl-button--colored mdl-button--raised mdl-js-ripple-effect"> Next Week</button>
   
 </div>
-<div class="mdl-card mdl-shadow--2dp teacher-card-image teacher-Bryce">
-  <div class="mdl-card__title mdl-card--expand"></div>
-  <div class="mdl-card__actions"> <span class="teacher-card-image__filename">August 9: <a href="https://www.lds.org/manual/primary-7-new-testament/lesson-25-parable-of-the-ten-virgins?lang=eng">Lesson 25</a></span> </div>
+
+<div class="mdl-card mdl-shadow--16dp teacher-card-square">
+  <div id="cardTitle" class="mdl-card__title mdl-card--expand teacher-Bryce">
+    <h2 id="lessonNumberHeader" class="mdl-card__title-text">Lesson 25</h2>
+  </div>
+  <div id="lessonTagline" class="mdl-card__supporting-text">
+    Parable of the Ten Virgins
+  </div>
+  <div class="mdl-card__actions mdl-card--border">
+    <a id="lessonLink" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+      Lesson Link
+    </a>
+  </div>
 </div>
-<div class="mdl-card mdl-shadow--2dp teacher-card-image teacher-Ryan">
-  <div class="mdl-card__title mdl-card--expand"></div>
-  <div class="mdl-card__actions"> <span class="teacher-card-image__filename">August 16:  Lesson 26</span> </div>
 </div>
-<div class="mdl-card mdl-shadow--2dp teacher-card-image teacher-Rene">
-  <div class="mdl-card__title mdl-card--expand"></div>
-  <div class="mdl-card__actions"> <span class="teacher-card-image__filename">August 23:  Lesson 27</span> </div>
-</div>
+
 <script src="js/external/jquery/jquery-2.1.4.min.js"></script> 
 <script src="js/external/jquery/jquery-ui.min.js"></script> 
-<script>
-    $( "#datepicker" ).datepicker( "option", "showAnim", "slideDown");
-
-  </script> 
 <script src="js/external/bootstrap/bootstrap.min.js"></script> 
 <script src="js/main.js"></script> 
 <script src="js/external/material/material.min.js"></script>

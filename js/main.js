@@ -22,13 +22,16 @@ $.getJSON(url, function(data) {
   App.lessonNumber = [];
   App.teacher = [];
   App.notes = [];
+  App.lessonName = [];
+  App.lessonLink = [];
  
   $(App.entry).each(function(){
-    // Column names are name, age, etc.
     App.dates.push(this.gsx$date.$t);
     App.lessonNumber.push(this.gsx$lessonnumber.$t);
     App.teacher.push(this.gsx$teacher.$t);
     App.notes.push(this.gsx$notes.$t);
+    App.lessonName.push(this.gsx$lessonname.$t);
+    App.lessonLink.push(this.gsx$lessonlink.$t);
       });
  
  });
@@ -36,8 +39,26 @@ $.getJSON(url, function(data) {
 var targetDate = new Date();  //sets targetDate to today when first loaded
 
 App.update = function() {
+  var indexValue = App.dates.indexOf(formatDateForComparison(targetDate));
+  console.log("Index Found: " + indexValue);
+  
   $('#targetDate').html(formatDateString(targetDate));
   $('#nextLessonDate').html(formatDateString(getNextLessonDate())); 
+  
+  //remove teacher classes from card Title
+  $('#cardTitle').removeClass('teacher-Bryce');
+  $('#cardTitle').removeClass('teacher-Ryan');
+  $('#cardTitle').removeClass('teacher-Rene');
+  $('#cardTitle').addClass('teacher-' + App.teacher[indexValue]);
+  
+  //update Lesson Tagline
+  $('#lessonTagline').html(App.lessonName[indexValue]);
+  
+  //update Lesson Number
+  $('#lessonNumberHeader').html("Lesson " + App.lessonNumber[indexValue]);
+  
+  //update Lesson Link
+  $('#lessonLink').attr("href",App.lessonLink[indexValue]) ;
 };
 
 App.nextWeek = function(){
@@ -64,6 +85,10 @@ function getNextLessonDate(){
 
 function formatDateString(date){
   return monthNames[date.getMonth()] + " " + date.getDate() + ", " + date.getFullYear();
+}
+
+function formatDateForComparison(date){
+  return (date.getMonth()+1) + "/" + date.getDate() + "/" + date.getFullYear(); 
 }
 
 App.update();
