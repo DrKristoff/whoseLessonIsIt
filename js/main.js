@@ -43,13 +43,14 @@ $.getJSON(url, function(data) {
     $('#cardTitle').removeClass('teacher-Bryce');
     $('#cardTitle').removeClass('teacher-Ryan');
     $('#cardTitle').removeClass('teacher-Rene');
+    $('#cardTitle').removeClass('teacher-none');
     $('#cardTitle').addClass('teacher-' + App.teacher[indexValue]);
     
     //update Lesson Tagline
     $('#lessonTagline').html(App.lessonName[indexValue]);
     
     //update Lesson Number
-    $('#lessonNumberHeader').html("Lesson " + App.lessonNumber[indexValue]);
+    $('#lessonNumberHeader').html(App.lessonNumber[indexValue]);
     
     //update Lesson Link
     $('#lessonLink').attr("href",App.lessonLink[indexValue]) ;

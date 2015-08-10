@@ -11,7 +11,7 @@
 .teacher-card-image.mdl-card {
   width: 256px;
   height: 256px;
-  margin: 10px auto;
+
 }
 .teacher-card-image > .mdl-card__actions {
   height: 52px;
@@ -25,9 +25,14 @@
 }
 
 .teacher-card-square.mdl-card {
-  width: 320px;
-  height: 320px;
+  width: 256px;
+  height: 256px;
   margin: 10px auto;
+    position:fixed;
+  top: 50%;
+  left: 50% ;
+  margin-left:-128px;
+  margin-top:-128px;
 }
 .teacher-card-square > .mdl-card__title {
   color: #fff;
