@@ -89,7 +89,9 @@ function formatDateForComparison(date){
   return (date.getMonth()+1) + "/" + date.getDate() + "/" + date.getFullYear(); 
 }
 
-//App.update();
+window.onload = function() {
+  App.update();
+};
 
 
 
