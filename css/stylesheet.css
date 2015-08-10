@@ -41,20 +41,23 @@
 .teacher-Ryan {
   background: url('../images/ryan.jpg') center / cover;
 }
+.teacher-none {
+  background: url('../images/na.jpg') center / cover;
+}
 .mdl-button--fab.mdl-button--colored {
   background: rgb(237, 7, 38);
-  ;
   color: #fff;
 }
 .controls {
   width:100%;
   max-width : 600px;
+  padding: 20px;
   display: flex;
   margin: 20px auto;
 }
 .controls > button {
-  width:30%;
-  min-width: 150px;
+  width:33%;
+  min-width: 100px;
   vertical-align: middle;
 }
 
@@ -62,6 +65,6 @@
 .controls {
   width: 100%;
   padding: 20px;
-  margin: 0 auto;
+  margin: 20px auto;
 }
 }
