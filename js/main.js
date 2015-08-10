@@ -60,8 +60,6 @@ $.getJSON(url, function(data) {
  
  });
 
-var targetDate = new Date();  //sets targetDate to today when first loaded
-
 App.nextWeek = function(){
   targetDate.setDate(targetDate.getDate()+7);
   this.update();
@@ -73,16 +71,19 @@ App.previousWeek = function(){
 }
 
 function getNextLessonDate(){
+  var today = new Date();
   var nextLessonDate = new Date();
    if (targetDate.getDay() != 0){
-     nextLessonDate.setDate(targetDate.getDate()+(7 - targetDate.getDay()));
+     nextLessonDate.setDate(today.getDate()+(7 - today.getDay()));
      return nextLessonDate;
    }
    else
    {
-     return targetDate;
+     return today;
    }
 }
+
+var targetDate = getNextLessonDate(); 
 
 function formatDateString(date){
   return monthNames[date.getMonth()] + " " + date.getDate() + ", " + date.getFullYear();
