@@ -62,12 +62,27 @@ $.getJSON(url, function(data) {
 
 App.nextWeek = function(){
   targetDate.setDate(targetDate.getDate()+7);
-  this.update();
+  if(targetDate.getFullYear() == 2015)
+  {
+    this.update();
+  }
+  else
+  {
+    targetDate.setDate(targetDate.getDate()-7);
+  }
+  
 }
 
 App.previousWeek = function(){
   targetDate.setDate(targetDate.getDate()-7);
-  this.update();
+  if(targetDate.getFullYear() == 2015)
+  {
+    this.update();
+  }
+  else
+  {
+    targetDate.setDate(targetDate.getDate()+7);
+  }
 }
 
 function getNextLessonDate(){
