@@ -33,27 +33,29 @@ $.getJSON(url, function(data) {
       });
       
   App.update = function() {
-  var indexValue = App.dates.indexOf(formatDateForComparison(targetDate));
-  console.log("Index Found: " + indexValue);
+    var indexValue = App.dates.indexOf(formatDateForComparison(targetDate));
+    console.log("Index Found: " + indexValue);
+    
+    //$('#targetDate').html(formatDateString(targetDate));
+    $('#nextLessonDate').html(formatDateString(getNextLessonDate())); 
+    
+    //remove teacher classes from card Title
+    $('#cardTitle').removeClass('teacher-Bryce');
+    $('#cardTitle').removeClass('teacher-Ryan');
+    $('#cardTitle').removeClass('teacher-Rene');
+    $('#cardTitle').addClass('teacher-' + App.teacher[indexValue]);
+    
+    //update Lesson Tagline
+    $('#lessonTagline').html(App.lessonName[indexValue]);
+    
+    //update Lesson Number
+    $('#lessonNumberHeader').html("Lesson " + App.lessonNumber[indexValue]);
+    
+    //update Lesson Link
+    $('#lessonLink').attr("href",App.lessonLink[indexValue]) ;
+  };
   
-  //$('#targetDate').html(formatDateString(targetDate));
-  $('#nextLessonDate').html(formatDateString(getNextLessonDate())); 
-  
-  //remove teacher classes from card Title
-  $('#cardTitle').removeClass('teacher-Bryce');
-  $('#cardTitle').removeClass('teacher-Ryan');
-  $('#cardTitle').removeClass('teacher-Rene');
-  $('#cardTitle').addClass('teacher-' + App.teacher[indexValue]);
-  
-  //update Lesson Tagline
-  $('#lessonTagline').html(App.lessonName[indexValue]);
-  
-  //update Lesson Number
-  $('#lessonNumberHeader').html("Lesson " + App.lessonNumber[indexValue]);
-  
-  //update Lesson Link
-  $('#lessonLink').attr("href",App.lessonLink[indexValue]) ;
-};
+  App.update();  
  
  });
 
@@ -89,9 +91,7 @@ function formatDateForComparison(date){
   return (date.getMonth()+1) + "/" + date.getDate() + "/" + date.getFullYear(); 
 }
 
-window.onload = function() {
-  App.update();
-};
+
 
 
 

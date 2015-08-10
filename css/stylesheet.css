@@ -36,7 +36,7 @@
   background: url('../images/bryce.jpg') center / cover;
 }
 .teacher-Rene {
-  background: url('../images/rene.jpg') center / cover;
+  background: url('../images/rene.jpg') top / cover;
 }
 .teacher-Ryan {
   background: url('../images/ryan.jpg') center / cover;
@@ -47,12 +47,14 @@
   color: #fff;
 }
 .controls {
-  width : 500px;
+  width:100%;
+  max-width : 600px;
   display: flex;
   margin: 20px auto;
 }
 .controls > button {
-  width: 150px;
+  width:30%;
+  min-width: 150px;
   vertical-align: middle;
 }
 
