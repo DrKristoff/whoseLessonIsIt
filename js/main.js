@@ -12,8 +12,6 @@ var monthNames = ["January", "February", "March", "April", "May", "June",
  // Make sure it is public or set to Anyone with link can view 
  var url = "https://spreadsheets.google.com/feeds/list/" + spreadsheetID + "/od6/public/values?alt=json";
  
-//var lessonData = https://spreadsheets.google.com/feeds/list/0Aqglj65pqAwmdEh4a1otT3lmYnN0TGV1Q2JkdndVUnc/od6/public/basic?hl=en_US&alt=json;
-
 $.getJSON(url, function(data) {
  
   App.entry = data.feed.entry;
@@ -33,12 +31,8 @@ $.getJSON(url, function(data) {
     App.lessonName.push(this.gsx$lessonname.$t);
     App.lessonLink.push(this.gsx$lessonlink.$t);
       });
- 
- });
-
-var targetDate = new Date();  //sets targetDate to today when first loaded
-
-App.update = function() {
+      
+  App.update = function() {
   var indexValue = App.dates.indexOf(formatDateForComparison(targetDate));
   console.log("Index Found: " + indexValue);
   
@@ -60,6 +54,12 @@ App.update = function() {
   //update Lesson Link
   $('#lessonLink').attr("href",App.lessonLink[indexValue]) ;
 };
+ 
+ });
+
+var targetDate = new Date();  //sets targetDate to today when first loaded
+
+
 
 App.nextWeek = function(){
   targetDate.setDate(targetDate.getDate()+7);
@@ -91,7 +91,7 @@ function formatDateForComparison(date){
   return (date.getMonth()+1) + "/" + date.getDate() + "/" + date.getFullYear(); 
 }
 
-App.update();
+//App.update();
 
 
 
