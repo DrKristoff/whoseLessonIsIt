@@ -37,7 +37,7 @@ $.getJSON(url, function(data) {
     console.log("Index Found: " + indexValue);
     
     //$('#targetDate').html(formatDateString(targetDate));
-    $('#nextLessonDate').html(formatDateString(getNextLessonDate())); 
+    $('#nextLessonDate').html(formatDateString(targetDate)); 
     
     //remove teacher classes from card Title
     $('#cardTitle').removeClass('teacher-Bryce');
