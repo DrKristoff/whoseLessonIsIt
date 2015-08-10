@@ -36,7 +36,7 @@ $.getJSON(url, function(data) {
   var indexValue = App.dates.indexOf(formatDateForComparison(targetDate));
   console.log("Index Found: " + indexValue);
   
-  $('#targetDate').html(formatDateString(targetDate));
+  //$('#targetDate').html(formatDateString(targetDate));
   $('#nextLessonDate').html(formatDateString(getNextLessonDate())); 
   
   //remove teacher classes from card Title
@@ -58,8 +58,6 @@ $.getJSON(url, function(data) {
  });
 
 var targetDate = new Date();  //sets targetDate to today when first loaded
-
-
 
 App.nextWeek = function(){
   targetDate.setDate(targetDate.getDate()+7);
