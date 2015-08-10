@@ -73,7 +73,7 @@ App.previousWeek = function(){
 function getNextLessonDate(){
   var today = new Date();
   var nextLessonDate = new Date();
-   if (targetDate.getDay() != 0){
+   if (today.getDay() != 0){
      nextLessonDate.setDate(today.getDate()+(7 - today.getDay()));
      return nextLessonDate;
    }
