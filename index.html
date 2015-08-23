@@ -11,32 +11,23 @@
 
 <body>
 <div class="page">
-<div class="controls" style="">
-    <button onclick = "App.previousWeek()" class="mdl-button mdl-button--colored mdl-js-button mdl-button--raised mdl-js-ripple-effect"> Previous</button>
-
-  <p style="text-align:center; width:30%; color:white"><span>Lesson Date:</span><br>
-  <span id='nextLessonDate'>Next Lesson Date</span><br>
-   <br>
-  <br></p>
-  <button onclick="App.nextWeek()" class="mdl-button mdl-js-button mdl-button--colored mdl-button--raised mdl-js-ripple-effect"> Next</button>
-  
+    <div class="controls" style="">
+      <button onclick = "App.previousWeek()" class="mdl-button mdl-button--colored mdl-js-button mdl-button--raised mdl-js-ripple-effect"> Previous</button>
+      <p style="text-align:center; width:30%; color:white"><span>Lesson Date:</span><br>
+        <span id='nextLessonDate'>Next Lesson Date</span><br>
+        <br>
+        <br>
+      </p>
+      <button onclick="App.nextWeek()" class="mdl-button mdl-js-button mdl-button--colored mdl-button--raised mdl-js-ripple-effect"> Next</button>
+    </div>
+    <div class="mdl-card mdl-shadow--16dp teacher-card-square">
+      <div id="cardTitle" class="mdl-card__title mdl-card--expand">
+        <h2 id="lessonNumberHeader" class="mdl-card__title-text">Lesson</h2>
+      </div>
+      <div id="lessonTagline" class="mdl-card__supporting-text"> Lesson Title </div>
+      <div class="mdl-card__actions mdl-card--border"> <a id="lessonLink" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect"> Lesson Link </a> </div>
+    </div>
 </div>
-
-<div class="mdl-card mdl-shadow--16dp teacher-card-square">
-  <div id="cardTitle" class="mdl-card__title mdl-card--expand">
-    <h2 id="lessonNumberHeader" class="mdl-card__title-text">Lesson</h2>
-  </div>
-  <div id="lessonTagline" class="mdl-card__supporting-text">
-    Lesson Title
-  </div>
-  <div class="mdl-card__actions mdl-card--border">
-    <a id="lessonLink" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
-      Lesson Link
-    </a>
-  </div>
-</div>
-</div>
-
 <script src="js/external/jquery/jquery-2.1.4.min.js"></script> 
 <script src="js/external/jquery/jquery-ui.min.js"></script> 
 <script src="js/external/bootstrap/bootstrap.min.js"></script> 

@@ -1,13 +1,18 @@
 /* CSS Document */
 .page {
   overflow: auto;
-  background: #078CA2;
+  background: #4C6ACC;
   height: 100%;
   width: 100%;
   position: absolute;
   top: 0;
   left: 0;
 }
+.actions {
+  height: 100%;
+  max-height:500px;  
+}
+
 .teacher-card-image.mdl-card {
   width: 256px;
   height: 256px;
@@ -16,7 +21,7 @@
 .teacher-card-image > .mdl-card__actions {
   height: 52px;
   padding: 16px;
-  background: rgba(237, 7, 38, 0.8);
+  background: rgba(171, 191, 255, 0.8);
 }
 .teacher-card-image__filename {
   color: #fff;
@@ -28,7 +33,7 @@
   width: 256px;
   height: 256px;
   margin: 10px auto;
-    position:fixed;
+    position:absolute;
   top: 50%;
   left: 50% ;
   margin-left:-128px;
@@ -50,14 +55,18 @@
   background: url('../images/na.jpg') center / cover;
 }
 .mdl-button--fab.mdl-button--colored {
-  background: rgb(237, 7, 38);
+  background: rgb(95, 133, 255);
   color: #fff;
 }
 .controls {
   width:100%;
   max-width : 600px;
   padding: 20px;
-  display: flex;
+  display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox;      /* TWEENER - IE 10 */
+  display: -webkit-flex;     /* NEW - Chrome */
+  display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
   margin: 20px auto;
 }
 .controls > button {
